@@ -1,0 +1,9 @@
+# Install CPU PyTorch first for a small download:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.2
+sentence-transformers>=3.0
+scikit-learn>=1.4
+streamlit>=1.40
+plotly>=5.20
+pandas>=2.1
+numpy>=1.26

@@ -1,0 +1,112 @@
+query,method,rank_of_answer,precision@1,recall@5,reciprocal_rank
+why can't I remember anything after pulling an all-nighter,Keyword (TF-IDF),1.0,1.0,1.0,1.0
+why can't I remember anything after pulling an all-nighter,Semantic (SBERT),1.0,1.0,1.0,1.0
+why can't I remember anything after pulling an all-nighter,Hybrid,1.0,1.0,1.0,1.0
+"my head hurts and I feel tired, maybe I'm not drinking enough",Keyword (TF-IDF),2.0,0.0,1.0,0.5
+"my head hurts and I feel tired, maybe I'm not drinking enough",Semantic (SBERT),1.0,1.0,1.0,1.0
+"my head hurts and I feel tired, maybe I'm not drinking enough",Hybrid,2.0,0.0,1.0,0.5
+do antibiotics help when I have a runny nose,Keyword (TF-IDF),1.0,1.0,1.0,1.0
+do antibiotics help when I have a runny nose,Semantic (SBERT),1.0,1.0,1.0,1.0
+do antibiotics help when I have a runny nose,Hybrid,1.0,1.0,1.0,1.0
+how to feel less anxious naturally,Keyword (TF-IDF),,0.0,0.0,0.0
+how to feel less anxious naturally,Semantic (SBERT),1.0,1.0,1.0,1.0
+how to feel less anxious naturally,Hybrid,2.0,0.0,1.0,0.5
+how to stop getting holes in my teeth,Keyword (TF-IDF),,0.0,0.0,0.0
+how to stop getting holes in my teeth,Semantic (SBERT),1.0,1.0,1.0,1.0
+how to stop getting holes in my teeth,Hybrid,1.0,1.0,1.0,1.0
+my eyes hurt after working on the laptop all day,Keyword (TF-IDF),8.0,0.0,0.0,0.125
+my eyes hurt after working on the laptop all day,Semantic (SBERT),1.0,1.0,1.0,1.0
+my eyes hurt after working on the laptop all day,Hybrid,1.0,1.0,1.0,1.0
+how do jabs protect us from illness,Keyword (TF-IDF),,0.0,0.0,0.0
+how do jabs protect us from illness,Semantic (SBERT),1.0,1.0,1.0,1.0
+how do jabs protect us from illness,Hybrid,1.0,1.0,1.0,1.0
+how can I keep hackers out of my accounts,Keyword (TF-IDF),1.0,1.0,0.5,1.0
+how can I keep hackers out of my accounts,Semantic (SBERT),1.0,1.0,1.0,1.0
+how can I keep hackers out of my accounts,Hybrid,1.0,1.0,1.0,1.0
+my internet is slow in the bedroom,Keyword (TF-IDF),2.0,0.0,1.0,0.5
+my internet is slow in the bedroom,Semantic (SBERT),1.0,1.0,1.0,1.0
+my internet is slow in the bedroom,Hybrid,1.0,1.0,1.0,1.0
+how to make my mobile last longer on a charge,Keyword (TF-IDF),1.0,1.0,1.0,1.0
+how to make my mobile last longer on a charge,Semantic (SBERT),1.0,1.0,1.0,1.0
+how to make my mobile last longer on a charge,Hybrid,1.0,1.0,1.0,1.0
+my PC takes forever to boot,Keyword (TF-IDF),,0.0,0.0,0.0
+my PC takes forever to boot,Semantic (SBERT),1.0,1.0,1.0,1.0
+my PC takes forever to boot,Hybrid,1.0,1.0,1.0,1.0
+what happens when a giant star dies,Keyword (TF-IDF),,0.0,0.0,0.0
+what happens when a giant star dies,Semantic (SBERT),1.0,1.0,1.0,1.0
+what happens when a giant star dies,Hybrid,2.0,0.0,1.0,0.5
+why is the red planet red,Keyword (TF-IDF),1.0,1.0,1.0,1.0
+why is the red planet red,Semantic (SBERT),1.0,1.0,1.0,1.0
+why is the red planet red,Hybrid,1.0,1.0,1.0,1.0
+why is it hot in summer and cold in winter,Keyword (TF-IDF),3.0,0.0,1.0,0.3333333333333333
+why is it hot in summer and cold in winter,Semantic (SBERT),1.0,1.0,1.0,1.0
+why is it hot in summer and cold in winter,Hybrid,2.0,0.0,1.0,0.5
+what killed the dinosaurs,Keyword (TF-IDF),1.0,1.0,1.0,1.0
+what killed the dinosaurs,Semantic (SBERT),1.0,1.0,1.0,1.0
+what killed the dinosaurs,Hybrid,1.0,1.0,1.0,1.0
+how do astronauts live in orbit,Keyword (TF-IDF),,0.0,0.0,0.0
+how do astronauts live in orbit,Semantic (SBERT),1.0,1.0,1.0,1.0
+how do astronauts live in orbit,Hybrid,2.0,0.0,1.0,0.5
+why does dough get bigger,Keyword (TF-IDF),2.0,0.0,1.0,0.5
+why does dough get bigger,Semantic (SBERT),1.0,1.0,1.0,1.0
+why does dough get bigger,Hybrid,1.0,1.0,1.0,1.0
+what to drink when a curry is too hot,Keyword (TF-IDF),,0.0,0.0,0.0
+what to drink when a curry is too hot,Semantic (SBERT),1.0,1.0,1.0,1.0
+what to drink when a curry is too hot,Hybrid,2.0,0.0,1.0,0.5
+why can't I sleep after my evening espresso,Keyword (TF-IDF),,0.0,0.0,0.0
+why can't I sleep after my evening espresso,Semantic (SBERT),1.0,1.0,1.0,1.0
+why can't I sleep after my evening espresso,Hybrid,1.0,1.0,1.0,1.0
+how to stop crying while chopping vegetables,Keyword (TF-IDF),,0.0,0.0,0.0
+how to stop crying while chopping vegetables,Semantic (SBERT),1.0,1.0,1.0,1.0
+how to stop crying while chopping vegetables,Hybrid,1.0,1.0,1.0,1.0
+vegetarian foods for building muscle,Keyword (TF-IDF),,0.0,0.0,0.0
+vegetarian foods for building muscle,Semantic (SBERT),1.0,1.0,1.0,1.0
+vegetarian foods for building muscle,Hybrid,1.0,1.0,1.0,1.0
+how to beat tiredness after a long flight,Keyword (TF-IDF),,0.0,0.0,0.0
+how to beat tiredness after a long flight,Semantic (SBERT),2.0,0.0,1.0,0.5
+how to beat tiredness after a long flight,Hybrid,4.0,0.0,1.0,0.25
+what if I fall sick on a foreign holiday,Keyword (TF-IDF),2.0,0.0,1.0,0.5
+what if I fall sick on a foreign holiday,Semantic (SBERT),1.0,1.0,1.0,1.0
+what if I fall sick on a foreign holiday,Hybrid,1.0,1.0,1.0,1.0
+I feel like vomiting on the ferry,Keyword (TF-IDF),,0.0,0.0,0.0
+I feel like vomiting on the ferry,Semantic (SBERT),1.0,1.0,1.0,1.0
+I feel like vomiting on the ferry,Hybrid,1.0,1.0,1.0,1.0
+best way to fit more clothes in my bag,Keyword (TF-IDF),,0.0,0.0,0.0
+best way to fit more clothes in my bag,Semantic (SBERT),1.0,1.0,1.0,1.0
+best way to fit more clothes in my bag,Hybrid,1.0,1.0,1.0,1.0
+how does my money grow if I start saving young,Keyword (TF-IDF),2.0,0.0,1.0,0.5
+how does my money grow if I start saving young,Semantic (SBERT),1.0,1.0,1.0,1.0
+how does my money grow if I start saving young,Hybrid,1.0,1.0,1.0,1.0
+how much cash should I keep aside in case I get fired,Keyword (TF-IDF),,0.0,0.0,0.0
+how much cash should I keep aside in case I get fired,Semantic (SBERT),2.0,0.0,1.0,0.5
+how much cash should I keep aside in case I get fired,Hybrid,3.0,0.0,1.0,0.3333333333333333
+why do things get more expensive every year,Keyword (TF-IDF),,0.0,0.0,0.0
+why do things get more expensive every year,Semantic (SBERT),1.0,1.0,1.0,1.0
+why do things get more expensive every year,Hybrid,3.0,0.0,1.0,0.3333333333333333
+should I invest everything in one company,Keyword (TF-IDF),1.0,1.0,0.5,1.0
+should I invest everything in one company,Semantic (SBERT),1.0,1.0,1.0,1.0
+should I invest everything in one company,Hybrid,1.0,1.0,1.0,1.0
+how many people are in a cricket side,Keyword (TF-IDF),1.0,1.0,1.0,1.0
+how many people are in a cricket side,Semantic (SBERT),1.0,1.0,1.0,1.0
+how many people are in a cricket side,Hybrid,1.0,1.0,1.0,1.0
+how long is the long distance running race,Keyword (TF-IDF),2.0,0.0,1.0,0.5
+how long is the long distance running race,Semantic (SBERT),1.0,1.0,1.0,1.0
+how long is the long distance running race,Hybrid,1.0,1.0,1.0,1.0
+exercise that is easy on the knees,Keyword (TF-IDF),,0.0,0.0,0.0
+exercise that is easy on the knees,Semantic (SBERT),2.0,0.0,1.0,0.5
+exercise that is easy on the knees,Hybrid,2.0,0.0,1.0,0.5
+why is the earth getting hotter,Keyword (TF-IDF),,0.0,0.0,0.0
+why is the earth getting hotter,Semantic (SBERT),1.0,1.0,1.0,1.0
+why is the earth getting hotter,Hybrid,2.0,0.0,0.5,0.5
+turtles are eating rubbish in the sea,Keyword (TF-IDF),1.0,1.0,1.0,1.0
+turtles are eating rubbish in the sea,Semantic (SBERT),1.0,1.0,1.0,1.0
+turtles are eating rubbish in the sea,Hybrid,1.0,1.0,1.0,1.0
+cheapest renewable electricity,Keyword (TF-IDF),1.0,1.0,1.0,1.0
+cheapest renewable electricity,Semantic (SBERT),1.0,1.0,1.0,1.0
+cheapest renewable electricity,Hybrid,1.0,1.0,1.0,1.0
+why are honeybees disappearing,Keyword (TF-IDF),,0.0,0.0,0.0
+why are honeybees disappearing,Semantic (SBERT),1.0,1.0,1.0,1.0
+why are honeybees disappearing,Hybrid,1.0,1.0,1.0,1.0
+what to do with leftover vegetable peels,Keyword (TF-IDF),1.0,1.0,1.0,1.0
+what to do with leftover vegetable peels,Semantic (SBERT),1.0,1.0,1.0,1.0
+what to do with leftover vegetable peels,Hybrid,1.0,1.0,1.0,1.0

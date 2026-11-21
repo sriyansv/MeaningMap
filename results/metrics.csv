@@ -1,0 +1,4 @@
+method,precision@1,recall@5,MRR
+Keyword (TF-IDF),0.297,0.459,0.391
+Semantic (SBERT),0.919,1.0,0.959
+Hybrid,0.703,0.986,0.836
