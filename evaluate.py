@@ -23,7 +23,6 @@ per_query, summary = se.evaluate(docs, queries, model, vectorizer, tfidf_matrix,
 print(f"\nDocuments: {len(docs)}   Test queries: {len(queries)}\n")
 print(summary.to_string())
 
-# How cleanly do the 8 topics cluster in each vector space? (silhouette, -1..1)
 print("\nTopic clustering (silhouette score, higher = cleaner clusters)")
 print("  TF-IDF space :", round(se.category_separation(tfidf_matrix.toarray(), docs["category"]), 3))
 print("  SBERT space  :", round(se.category_separation(embeddings, docs["category"]), 3))

@@ -35,7 +35,6 @@ CATEGORY_SYMBOLS = {
     "Custom": "circle",
 }
 
-# Page styling (pure CSS - no logic here)
 st.markdown("""
 <style>
 .block-container { padding-top: 2rem; max-width: 1300px; }
@@ -94,7 +93,6 @@ except Exception as error:  # e.g. no internet on the very first run
              f"The first run needs internet to download it once. Details: {error}")
     st.stop()
 
-# Sidebar - settings
 with st.sidebar:
     st.markdown("### Settings")
     corpus_choice = st.radio("Document collection", ["Built-in knowledge base (80 docs)", "Paste my own documents"])
@@ -127,7 +125,6 @@ vectorizer, tfidf_matrix, embeddings = get_indexes(tuple(docs["text"]))
 eval_queries = se.load_eval_queries()
 expected_answers = {item["query"].lower(): set(item["relevant"]) for item in eval_queries}
 
-# Header
 st.title("MeaningMap")
 st.write("Comparing keyword search (TF-IDF) with semantic search (Sentence-BERT) on the same set of documents. "
          "Type a question and see which method finds the right answer.")
@@ -234,7 +231,6 @@ all_scores = {"Keyword (TF-IDF)": kw, "Semantic (SBERT)": sem, "Hybrid": hyb}
 tab_battle, tab_galaxy, tab_lab, tab_hood, tab_eval = st.tabs(
     ["Search", "Document map", "Compare sentences", "How it works", "Evaluation"])
 
-# ---- tab 1: Search battle ----
 with tab_battle:
     best_kw, best_sem = int(np.argmax(kw)), int(np.argmax(sem))
     if sem.max() < 0.25:  # even the best meaning match is weak
@@ -273,7 +269,6 @@ with tab_battle:
             for rank, doc_index in enumerate(shown, start=1):
                 result_card(rank, doc_index, float(scores[doc_index]), color, query, method)
 
-# ---- tab 2: Meaning galaxy (2-D maps of both vector spaces) ----
 with tab_galaxy:
     st.markdown("Every dot is a document. Documents that are **close together are similar** according to that method. "
                 "The star is your query, and lines connect it to that method's top-3 results.")
@@ -324,7 +319,6 @@ with tab_galaxy:
         st.caption("Silhouette score ranges from −1 to 1. Higher means documents of the same category sit closer "
                    "to each other than to other categories. Computed on the full vectors, not the 2-D picture.")
 
-# ---- tab 3: Similarity lab (compare any two sentences) ----
 with tab_lab:
     st.markdown("Compare **any two sentences**. TF-IDF only counts shared words; Sentence-BERT compares meaning.")
     # preset name: (sentence A, sentence B, what to notice)
@@ -376,7 +370,6 @@ with tab_lab:
                        "Tip: compare scores within one method. Sentence-BERT rarely gives exactly 0, "
                        "even for unrelated sentences.")
 
-# ---- tab 4: Under the hood (pipeline for the current query) ----
 with tab_hood:
     st.markdown(f"Here is exactly what each method does with your query: **“{html.escape(query)}”**")
     left, right = st.columns(2)
@@ -432,7 +425,6 @@ with tab_hood:
         st.markdown(f"Highest: **{sem[best]:.3f}** with “{docs.iloc[best]['title']}”. "
                     f"Lowest: **{sem.min():.3f}**.")
 
-# ---- tab 5: Evaluation on the hand-labelled test set ----
 with tab_eval:
     st.markdown(f"**Test set:** {len(eval_queries)} natural-language questions written in everyday words, each labelled "
                 "with the document(s) that answer it. All three methods search the same 80 built-in documents. "

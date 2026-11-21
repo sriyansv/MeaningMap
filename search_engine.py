@@ -22,7 +22,6 @@ from sklearn.decomposition import PCA, TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# Folder that contains this file, so paths work from anywhere.
 PROJECT_DIR = Path(__file__).parent
 DATA_DIR = PROJECT_DIR / "data"
 
@@ -121,12 +120,11 @@ def top_k(scores, k=5):
 def preprocessing_steps(text, vectorizer):
     """Show every TF-IDF preprocessing step for one piece of text."""
     lowered = vectorizer.build_preprocessor()(text)          # lower-casing
-    tokens = vectorizer.build_tokenizer()(lowered)           # split into words
+    tokens = vectorizer.build_tokenizer()(lowered)
     stop_words = vectorizer.get_stop_words()
-    kept = [t for t in tokens if t not in stop_words]         # stop-word removal
-    in_vocab = [t for t in kept if t in vectorizer.vocabulary_]  # words the index knows
+    kept = [t for t in tokens if t not in stop_words]
+    in_vocab = [t for t in kept if t in vectorizer.vocabulary_]
 
-    # Non-zero TF-IDF weights of the text
     vector = vectorizer.transform([text]).toarray()[0]
     vocab = vectorizer.get_feature_names_out()
     weights = {vocab[i]: round(float(vector[i]), 3) for i in np.nonzero(vector)[0]}
@@ -167,7 +165,7 @@ def word_similarity_matrix(sentence_a, sentence_b, model):
     """Meaning similarity between every content word of A and every content word of B."""
     # analyzer = lowercase + tokenize + remove stop words
     analyzer = TfidfVectorizer(stop_words="english").build_analyzer()
-    words_a = list(dict.fromkeys(analyzer(sentence_a)))  # dict.fromkeys = unique, keeps order
+    words_a = list(dict.fromkeys(analyzer(sentence_a)))
     words_b = list(dict.fromkeys(analyzer(sentence_b)))
     if not words_a or not words_b:
         return words_a, words_b, np.zeros((len(words_a), len(words_b)))
@@ -192,7 +190,7 @@ def compare_two_sentences(sentence_a, sentence_b, model):
 
 
 # ---------------------------------------------------------------------------
-# 5. 2-D maps of the vector spaces (for the "Meaning Galaxy")
+# 5. 2-D maps of the vector spaces
 # ---------------------------------------------------------------------------
 
 def project_semantic_space(embeddings, query_embedding):
