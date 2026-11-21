@@ -67,7 +67,9 @@ doc.add_paragraph()
 para("Natural Language Processing - Project Report", size=13, align=WD_ALIGN_PARAGRAPH.CENTER)
 para("B.Tech Artificial Intelligence and Data Science", size=12, align=WD_ALIGN_PARAGRAPH.CENTER)
 doc.add_paragraph()
-para("Student name: ______________________     Roll no.: ______________", size=12, align=WD_ALIGN_PARAGRAPH.CENTER)
+para("Submitted by", size=12, align=WD_ALIGN_PARAGRAPH.CENTER)
+para("VEMULA PAVANA SAI SRIYANS", bold=True, size=13, align=WD_ALIGN_PARAGRAPH.CENTER)
+para("Roll No.: 124AD0046", size=12, align=WD_ALIGN_PARAGRAPH.CENTER)
 doc.add_page_break()
 
 # ---------------- Abstract ----------------
@@ -186,22 +188,6 @@ para("Effect of the hybrid weight α (0 = pure keyword, 1 = pure meaning):")
 table(["α", "Hybrid MRR", "Hybrid P@1"],
       [[f"{r.alpha:.1f}", f"{r.hybrid_MRR:.3f}", f"{r['hybrid_P@1']:.3f}"] for _, r in sweep.iterrows()])
 para("Topic clustering, silhouette score on full vectors (−1 to 1): TF-IDF −0.001, Sentence-BERT 0.073.")
-doc.add_heading("6.1 Discussion", level=2)
-bullets([
-    f"Semantic search ranked a correct answer first for {int(round(sm['precision@1'] * 37))} of 37 questions; TF-IDF "
-    f"for {int(round(km['precision@1'] * 37))}.",
-    "TF-IDF failed whenever the question used synonyms, e.g. 'how do jabs protect us from illness' vs. 'Vaccines train "
-    "the immune system'. It can also be misled by an incidental shared word: for 'my PC takes forever to boot' its top "
-    "result was 'The Sun', matched only on 'takes'.",
-    "The hybrid improved steadily as α increased and did not beat pure semantic search on this test set, because the "
-    "questions are paraphrases. Keyword weighting is expected to help with exact names, codes or rare terms, which this "
-    "test set rarely contains.",
-    "Both silhouette scores are low (short texts, overlapping topics), but documents cluster better by topic in the "
-    "embedding space, although the model never saw topic labels.",
-    "Sentence-pair tests show limitations: TF-IDF scores 'The food was not good' vs 'The food was good' as 1.00 "
-    "because 'not' is a stop word (SBERT 0.82), and both methods score 'The dog bit the man' vs 'The man bit the dog' "
-    "as near-identical (1.00 and 0.98).",
-])
 
 # ---------------- 7 Screenshots ----------------
 doc.add_heading("7. Application screenshots", level=1)
